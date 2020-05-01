@@ -14,7 +14,8 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    {{-- You are logged in! --}}
+                    @trix(\App\Article::class, 'content')
                 </div>
             </div>
         </div>
