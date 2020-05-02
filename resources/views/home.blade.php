@@ -14,7 +14,6 @@
                         </div>
                     @endif
 
-<<<<<<< HEAD
                     <form method="POST" action="{{ url('page') }}" enctype="multipart/form-data">
                         @csrf
 
@@ -150,10 +149,6 @@
                     </form>
 
 
-=======
-                    {{-- You are logged in! --}}
-                    @trix(\App\Article::class, 'content')
->>>>>>> 21ef846314a611658b7ec7c30f93e38f6f7277e7
                 </div>
 
             </div>

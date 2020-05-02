@@ -51,11 +51,8 @@
                             </div>
                         </div>
 
-<<<<<<< HEAD
-=======
                         {{-- @trix(\App\Article::class, 'content') --}}
 
->>>>>>> 21ef846314a611658b7ec7c30f93e38f6f7277e7
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
