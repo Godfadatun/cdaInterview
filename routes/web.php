@@ -14,13 +14,13 @@ use App\Mail\ContactMail;
 |
 */
 
-Route::get('', function () {
+Route::get('/', function () {
     return view('index');
 });
 // Route::get('/contact', function () {
 //     return view('contact');
 // });
-Route::get('/admin', function () {
+Route::get('admin', function () {
     return view('welcome');
 });
 
@@ -34,5 +34,5 @@ Route::get('/admin', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('home', 'HomeController@index')->name('home');
 Route::resource('contact', 'ContactController');
