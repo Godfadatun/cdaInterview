@@ -14,15 +14,23 @@ use App\Mail\ContactMail;
 |
 */
 
-Route::get('/', function () {
+Route::get('', function () {
     return view('index');
 });
-
+// Route::get('/contact', function () {
+//     return view('contact');
+// });
 Route::get('/admin', function () {
     return view('welcome');
 });
 
+// Route::get('/email', function () {
+//     return new ContactMail();
+// });
 
+// Route::get('/', function () {
+//     return view('main');
+// });
 
 Auth::routes();
 
