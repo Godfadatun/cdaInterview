@@ -418,7 +418,7 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   display: none;
   transition: ease-in-out 0.2s;
-  
+
 }
 
 .mobile-nav-active {
@@ -1177,7 +1177,7 @@ section {
   padding: 12px 15px;
 }
 
-.contact .php-email-form button[type="submit"] {
+.contact .php-email-form button[type=""] {
   background: #cc1616;
   border: 0;
   padding: 10px 24px;
@@ -1185,7 +1185,7 @@ section {
   transition: 0.4s;
 }
 
-.contact .php-email-form button[type="submit"]:hover {
+.contact .php-email-form button[type=""]:hover {
   background: #e82d2d;
 }
 
@@ -1496,13 +1496,13 @@ section {
   font:16px Arial, Verdana, Helvetica, sans-serif;
 }
 .theHeader{
-  font:17px Arial, Verdana, Helvetica, sans-serif; 
-  font-weight:bold; 
+  font:17px Arial, Verdana, Helvetica, sans-serif;
+  font-weight:bold;
   color:#000066;
-  font-weight:bold; 
+  font-weight:bold;
 }
 .theTopic {
-  font:16px Arial, Verdana, Helvetica, sans-serif; 
-  font-weight:bold; 
-  font-weight:bold; 
+  font:16px Arial, Verdana, Helvetica, sans-serif;
+  font-weight:bold;
+  font-weight:bold;
 }

@@ -8,6 +8,7 @@
         <title>Day Bootstrap Template - Index</title>
         <meta content="" name="descriptison">
         <meta content="" name="keywords">
+        <meta name="robots" content="noindex">
 
         <!-- Favicons -->
         <link href="../assets/img/favicon.png" rel="icon">
@@ -48,7 +49,7 @@
 
             </div>
         </header><!-- End Header -->
-    
+
 
     @yield('content')
 
