@@ -24,7 +24,7 @@ class PageController extends Controller
      */
     public function create()
     {
-        //
+        return view('page');
     }
 
     /**
@@ -38,19 +38,18 @@ class PageController extends Controller
         $fileName = time().'.'.$request->featured_image->extension();
         $request->featured_image->move(public_path('uploads'), $fileName);
 
-        $page = Page::create([
+        Page::create([
             'name' => $request->name,
             'featured_image' => $fileName,
             'title' => $request->title ,
             'heading' => $request->heading,
-            'content' => $request->content,
             'no_index' => $request->no_index,
             'meta_title' => $request->meta_title,
             'meta_description' => $request->meta_description,
             'content' => $request->get('page-trixFields')['content']
         ]);
 
-        return view('home');
+        return redirect('home');
 
     }
 

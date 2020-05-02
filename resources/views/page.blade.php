@@ -3,11 +3,12 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
+
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
@@ -15,37 +16,11 @@
                     @endif
 
                     <div>
-                        <a href="{{ url('page/create')}}" class="btn btn-primary">Add Page</a>
+                        <a href="{{ url('home')}}" class="btn btn-primary">Back Home</a>
                     </div>
 
 
-                    <table class="table table-striped">
-                        <thead>
-                          <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Title</th>
-                            <th scope="col">heading</th>
-                            <th scope="col">action</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-
-                        @foreach ($page as $item)
-                            <tr>
-                                <th scope="row">{{$item['id']}}</th>
-                                <td>{{$item['name']}}</td>
-                                <td>{{$item['title']}}</td>
-                                <td>{{$item['heading']}}</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary btn-sm">Edit</button>
-                                </td>
-                            </tr>
-                        @endforeach
-                        </tbody>
-                      </table>
-
-                    {{-- <form method="POST" action="{{ url('page') }}" enctype="multipart/form-data">
+                    <form method="POST" action="{{ url('page') }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group row">
@@ -177,7 +152,7 @@
                                 </button>
                             </div>
                         </div>
-                    </form> --}}
+                    </form>
 
 
                 </div>
