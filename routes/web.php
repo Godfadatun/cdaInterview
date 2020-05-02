@@ -35,8 +35,5 @@ Route::get('/email', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-<<<<<<< HEAD
-Route::resource('page', 'PageController');
-=======
 Route::resource('contact', 'ContactController');
->>>>>>> 21ef846314a611658b7ec7c30f93e38f6f7277e7
+Route::resource('page', 'PageController');
