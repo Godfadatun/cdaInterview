@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Mail\ContactMail;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +15,28 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('index');
+});
+// Route::get('/contact', function () {
+//     return view('contact');
+// });
+Route::get('/admin', function () {
     return view('welcome');
 });
+
+Route::get('/email', function () {
+    return new ContactMail();
+});
+
+// Route::get('/', function () {
+//     return view('main');
+// });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+<<<<<<< HEAD
 Route::resource('page', 'PageController');
+=======
+Route::resource('contact', 'ContactController');
+>>>>>>> 21ef846314a611658b7ec7c30f93e38f6f7277e7
