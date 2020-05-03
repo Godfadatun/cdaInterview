@@ -38,7 +38,7 @@
                                 <td>{{$item['title']}}</td>
                                 <td>{{$item['heading']}}</td>
                                 <td>
-                                    <button type="button" class="btn btn-primary btn-sm">Edit</button>
+                                    <a href="{{url('page/'.$item['id'].'/edit')}}" class="btn btn-primary btn-sm">Edit</a>
                                 </td>
                             </tr>
                         @endforeach

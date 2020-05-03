@@ -72,7 +72,8 @@ class PageController extends Controller
      */
     public function edit($id)
     {
-        //
+        $page = Page::where('id',$id)->first();
+        return view('page', compact('page'));
     }
 
     /**
