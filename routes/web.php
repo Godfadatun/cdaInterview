@@ -37,3 +37,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('contact', 'ContactController');
 Route::resource('page', 'PageController');
+Route::resource('globals', 'GlobalController');

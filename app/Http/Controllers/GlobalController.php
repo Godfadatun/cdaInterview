@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Page;
+use Illuminate\Support\Facades\DB;
 
-class PageController extends Controller
+class GlobalController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class PageController extends Controller
      */
     public function index()
     {
-        //
+        $global =  DB::table('globals')->first();
+        return view('globals', compact('global'));
     }
 
     /**
@@ -24,7 +25,7 @@ class PageController extends Controller
      */
     public function create()
     {
-        return view('page');
+        dd('create');
     }
 
     /**
@@ -35,21 +36,7 @@ class PageController extends Controller
      */
     public function store(Request $request)
     {
-        $fileName = time().'.'.$request->featured_image->extension();
-        $request->featured_image->move(public_path('uploads'), $fileName);
-
-        Page::create([
-            'name' => $request->name,
-            'featured_image' => $fileName,
-            'title' => $request->title ,
-            'heading' => $request->heading,
-            'no_index' => $request->no_index,
-            'meta_title' => $request->meta_title,
-            'meta_description' => $request->meta_description,
-            'content' => $request->get('page-trixFields')['content']
-        ]);
-
-        return redirect('home')->withSuccess('Page saved successfully!');
+        dd('store');
     }
 
     /**
@@ -60,7 +47,7 @@ class PageController extends Controller
      */
     public function show($id)
     {
-        //
+        dd('show');
     }
 
     /**
@@ -71,8 +58,7 @@ class PageController extends Controller
      */
     public function edit($id)
     {
-        $page = Page::where('id',$id)->first();
-        return view('page', compact('page'));
+        dd('edit');
     }
 
     /**
@@ -84,7 +70,13 @@ class PageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $global = DB::table('globals')->where('id',$id)->update([
+            'fb_ads_pixel' => $request->fb_ads_pixel,
+            'google_analytics_tag' => $request->google_analytics_tag,
+            'contact_email' => $request->contact_email,
+        ]);
+
+        return redirect('home')->withSuccess('Globals saved successfully!');
     }
 
     /**
@@ -95,6 +87,6 @@ class PageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        dd('destroy');
     }
 }

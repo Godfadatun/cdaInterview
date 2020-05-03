@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class Globals extends Seeder
 {
@@ -11,6 +12,10 @@ class Globals extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('globals')->insert([
+            'fb_ads_pixel' => '',
+            'google_analytics_tag' => '',
+            'contact_email' => '',
+        ]);
     }
 }

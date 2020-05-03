@@ -13,6 +13,13 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    
+                    @if(session('success'))
+                    <div class="alert alert-success" role="alert">
+                        {{session('success')}}
+                    </div>
+                    @endif
+                    
 
                     <div>
                         <a href="{{ url('page/create')}}" class="btn btn-primary">Add Page</a>
@@ -26,7 +33,7 @@
                             <th scope="col">Name</th>
                             <th scope="col">Title</th>
                             <th scope="col">heading</th>
-                            <th scope="col">action</th>
+                            <th scope="col">Content</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -37,9 +44,10 @@
                                 <td>{{$item['name']}}</td>
                                 <td>{{$item['title']}}</td>
                                 <td>{{$item['heading']}}</td>
-                                <td>
+                                <td>{!! substr($item['content'],  0,  50) !!}</td>
+                                {{-- <td>
                                     <a href="{{url('page/'.$item['id'].'/edit')}}" class="btn btn-primary btn-sm">Edit</a>
-                                </td>
+                                </td> --}}
                             </tr>
                         @endforeach
                         </tbody>
