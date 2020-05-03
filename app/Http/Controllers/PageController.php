@@ -95,6 +95,7 @@ class PageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Page::destroy($id);
+        return redirect('home')->withSuccess('Page deleted successfully!');
     }
 }

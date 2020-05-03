@@ -43,7 +43,7 @@
                             <label for="featured_image" class="col-md-4 col-form-label text-md-right">{{ __('Featured Image') }}</label>
 
                             <div class="col-md-6">
-                                <input id="featured_image" type="file" class="form-control @error('featured_image') is-invalid @enderror" name="featured_image" value="{{ old('featured_image') }}" autocomplete="Featured Image" autofocus>
+                                <input id="featured_image" type="file" class="form-control @error('featured_image') is-invalid @enderror" name="featured_image" value="{{ $page->featured_image }}" autocomplete="Featured Image" autofocus>
 
                                 @error('featured_image')
                                     <span class="invalid-feedback" role="alert">
@@ -58,7 +58,7 @@
                             <label for="title" class="col-md-4 col-form-label text-md-right">{{ __('Title') }}</label>
 
                             <div class="col-md-6">
-                                <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" autocomplete="title" autofocus>
+                                <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ $page->title }}" autocomplete="title" autofocus>
 
                                 @error('title')
                                     <span class="invalid-feedback" role="alert">
@@ -72,7 +72,7 @@
                             <label for="heading" class="col-md-4 col-form-label text-md-right">{{ __('Heading') }}</label>
 
                             <div class="col-md-6">
-                                <input id="heading" type="text" class="form-control @error('heading') is-invalid @enderror" name="heading" value="{{ old('heading') }}" autocomplete="heading">
+                                <input id="heading" type="text" class="form-control @error('heading') is-invalid @enderror" name="heading" value="{{ $page->heading }}" autocomplete="heading">
 
                                 @error('heading')
                                     <span class="invalid-feedback" role="alert">
@@ -88,7 +88,7 @@
                             <label for="meta_title" class="col-md-4 col-form-label text-md-right">{{ __('Meta Title') }}</label>
 
                             <div class="col-md-6">
-                                <input id="meta_title" type="text" class="form-control @error('meta_title') is-invalid @enderror" name="meta_title" autocomplete="meta_title">
+                                <input id="meta_title" type="text" class="form-control @error('meta_title') is-invalid @enderror" name="meta_title" value="{{ $page->meta_title }}" autocomplete="meta_title">
 
                                 @error('meta_title')
                                     <span class="invalid-feedback" role="alert">
@@ -102,8 +102,8 @@
                             <label for="meta_description" class="col-md-4 col-form-label text-md-right">{{ __('Meta Description') }}</label>
 
                             <div class="col-md-6">
-                                <textarea id="meta_description" class="form-control @error('meta_description') is-invalid @enderror" name="meta_description" autocomplete="meta_description">
-                                </textarea>
+                                <input id="meta_description" class="form-control @error('meta_description') is-invalid @enderror" value="{{ $page->meta_description }}" name="meta_description">
+                                                                 
                                 @error('meta_description')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -133,7 +133,7 @@
 
                             <div class="col-md-6">
 
-                                <select id="no_index" type="checkbox" class="form-control @error('no_index') is-invalid @enderror" name="no_index" >
+                                <select id="no_index" type="checkbox" class="form-control @error('no_index') is-invalid @enderror" name="no_index">                                   
                                     <option value="1">Yes</option>
                                     <option value="0">No</option>
                                 </select>

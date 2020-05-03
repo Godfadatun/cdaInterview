@@ -42,6 +42,9 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
+                            <a class="nav-link" href="{{ url('home') }}">{{ __('Home') }}</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ url('globals') }}">{{ __('Globals Settings') }}</a>
                         </li>
                         <!-- Authentication Links -->
