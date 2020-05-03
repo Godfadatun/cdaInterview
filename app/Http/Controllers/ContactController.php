@@ -19,8 +19,8 @@ class ContactController extends Controller
     public function index()
     {
         //
-        $contact = Page::where('name', 'contact')->first();
-        return view('contact', compact('contact'));
+        $page = Page::where('name', 'contact')->first();
+        return view('contact', compact('page'));
     }
 
     /**

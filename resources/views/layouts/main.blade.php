@@ -5,10 +5,15 @@
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        <title>Day Bootstrap Template - Index</title>
-        <meta content="" name="descriptison">
+        <title>{{ $page->meta_title }}</title>
+        <meta content="{{ $page->meta_descriptison }}" name="descriptison">
+
         <meta content="" name="keywords">
-        <meta name="robots" content="noindex">
+
+        @if ($page->no_index == true)
+            <meta name="robots" content="noindex">
+        @endif
+
 
         <!-- Favicons -->
         <link href="../assets/img/favicon.png" rel="icon">
@@ -26,6 +31,7 @@
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165353516-1"></script>
+
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

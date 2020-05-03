@@ -14,7 +14,7 @@ class MainController extends Controller
      */
     public function index()
     {
-        $home = Page::where('name', 'home')->first();
-        return view('index', compact('home'));
+        $page = Page::where('name', 'home')->first();
+        return view('index', compact('page'));
     }
 }

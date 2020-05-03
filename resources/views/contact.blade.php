@@ -1,15 +1,21 @@
 
 @extends('layouts.main')
 
+{{ $theSrc = asset('uploads/' . $page->featured_image) }}
+
 @section('content')
-    <section id="theContact" class="d-flex align-items-center" ></section><!-- End Hero -->
-    {{-- <img  src="{{ URL::asset('img/' . $contact->featured_image) }}" alt="" style="width: 100%; height: 50vh; background-size: cover;" > --}}
-    {{$contact->featured_image}}
+    {{-- <section id="theContact" class="d-flex align-items-center" ></section><!-- End Hero --> --}}
+    <section class="d-flex align-items-center"
+    style=" width: 100%; height: 100vh; background: url('{{$theSrc}}') top center; background-size: cover; "
+    ></section>
+
   <!-- ======= About Section ======= -->
     <section id="about" class="">
         <div class="container">
 
-        {!! $contact->content !!}
+
+
+        {!! $page->content !!}
 
         </div>
     </section><!-- End About Section -->
