@@ -1,9 +1,9 @@
 
 @extends('layouts.main')
-
+{{ $theSrc = asset('uploads/' . $page->featured_image) }}
 @section('content')
     <!-- ======= Hero Section ======= -->
-    {{ $theSrc = asset('uploads/' . $page->featured_image) }}
+
     <section class="d-flex align-items-center" style=" width: 100%; height: 100vh; background: url('{{$theSrc}}') top center; background-size: cover; ">
         <div class="container  text-center text-capitalize font-weight-light " data-aos="fade-up" data-aos-delay="500">
         <h1>{{$page->title}}</h1>
@@ -12,9 +12,6 @@
             </div>
         </div>
     </section><!-- End Hero -->
-
-    {{ Request::path() }} <br>
-    {{-- {{ Route::current()     }} --}}
 
     <section id="about" class="">
         <div class="container">

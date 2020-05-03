@@ -1,9 +1,10 @@
 
 @extends('layouts.main')
 
-{{ $theSrc = asset('uploads/' . $page->featured_image) }}
+
 
 @section('content')
+{{ $theSrc = asset('uploads/' . $page->featured_image) }}
     {{-- <section id="theContact" class="d-flex align-items-center" ></section><!-- End Hero --> --}}
     <section class="d-flex align-items-center"
     style=" width: 100%; height: 100vh; background: url('{{$theSrc}}') top center; background-size: cover; "
@@ -12,7 +13,6 @@
   <!-- ======= About Section ======= -->
     <section id="about" class="">
         <div class="container">
-
 
 
         {!! $page->content !!}
@@ -43,8 +43,8 @@
             </div>
             <div class="mb-3">
             <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your message has been sent. Thank you!</div>
+            {{-- <div class="error-message"></div> --}}
+            {{-- <div class="sent-message">Your message has been sent. Thank you!</div> --}}
             </div>
             <div class="form-row d-flex justify-content-center">
                 <div class="text-center mr-1 "><button type="reset" class="btn btn-primary">Reset</button></div>
