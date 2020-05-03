@@ -7,6 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ContactMail extends Mailable
 {
@@ -33,11 +34,11 @@ class ContactMail extends Mailable
      */
     public function build()
     {
-
+        $global = DB::table('globals')->first();
         return $this->markdown('email.contactMail')
-                    ->from('dafedan@yahoo.com', 'CDA Interview')
+                    ->from($global->contact_email, 'CDA Interview')
                     ->to($this->email->email, $this->email->name)
                     ->subject('CDA Interview Response Mail')
-                    ->replyTo($this->email->email, $this->email->name);
+                    ->replyTo($global->contact_email, $this->email->name);
     }
 }
