@@ -23,3 +23,4 @@ Route::resource('/', 'MainController');
 Route::resource('contact', 'ContactController');
 Route::resource('admin', 'AdminController');
 Route::resource('page', 'PageController');
+Route::resource('globals', 'GlobalController');

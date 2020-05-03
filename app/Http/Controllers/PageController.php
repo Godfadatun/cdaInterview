@@ -24,7 +24,7 @@ class PageController extends Controller
      */
     public function create()
     {
-        //
+        return view('page.create');
     }
 
     /**
@@ -35,23 +35,24 @@ class PageController extends Controller
      */
     public function store(Request $request)
     {
-        $fileName = time().'.'.$request->featured_image->extension();
-        $request->featured_image->move(public_path('uploads'), $fileName);
+        $fileName = '';
+        if($request->hasFile('featured_image')){
+            $fileName = time().'.'.$request->featured_image->extension();
+            $request->featured_image->move(public_path('uploads'), $fileName);
+        }       
 
-        $page = Page::create([
+        Page::create([
             'name' => $request->name,
             'featured_image' => $fileName,
             'title' => $request->title ,
             'heading' => $request->heading,
-            'content' => $request->content,
             'no_index' => $request->no_index,
             'meta_title' => $request->meta_title,
             'meta_description' => $request->meta_description,
             'content' => $request->get('page-trixFields')['content']
         ]);
 
-        return view('home');
-
+        return redirect('home')->withSuccess('Page saved successfully!');
     }
 
     /**
@@ -73,7 +74,8 @@ class PageController extends Controller
      */
     public function edit($id)
     {
-        //
+        $page = Page::where('id',$id)->first();
+        return view('page.update', compact('page'));
     }
 
     /**
@@ -85,7 +87,25 @@ class PageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        if($request->hasFile('featured_image')){
+            $fileName = time().'.'.$request->featured_image->extension();
+            $request->featured_image->move(public_path('uploads'), $fileName);
+            Page::where('id',$id)->update([
+                'featured_image' => $fileName
+            ]);
+         }
+        
+        Page::where('id',$id)->update([
+            'name' => $request->name,
+            'title' => $request->title ,
+            'heading' => $request->heading,
+            'no_index' => $request->no_index,
+            'meta_title' => $request->meta_title,
+            'meta_description' => $request->meta_description,
+            'content' => $request->content,
+        ]);
+
+        return redirect('home')->withSuccess('Page updated successfully!');
     }
 
     /**
@@ -96,6 +116,7 @@ class PageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Page::destroy($id);
+        return redirect('home')->withSuccess('Page deleted successfully!');
     }
 }

@@ -37,7 +37,7 @@
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'UA-165353516-1');
+            gtag('config',   $global_settings->google_analytics_tag);
         </script>
 
         <!-- Facebook Pixel Code -->
@@ -50,11 +50,11 @@
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '547445562579633');
+            fbq('init', $global_settings->fb_ads_pixel);
             fbq('track', 'PageView');
         </script>
         <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=547445562579633&ev=PageView&noscript=1"
+            src="https://www.facebook.com/tr?id={{$global_settings->fb_ads_pixel}}&ev=PageView&noscript=1"
         /></noscript>
         <!-- End Facebook Pixel Code -->
 
