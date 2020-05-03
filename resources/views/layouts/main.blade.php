@@ -37,7 +37,7 @@
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config',   '{{$global_settings->google_analytics_tag}}');
+            gtag('config', '{{$global_settings->google_analytics_tag}}');
         </script>
 
         {{-- {{dd($global_settings->fb_ads_pixel)}} --}}
@@ -52,7 +52,6 @@
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            
             fbq('init', '{{$global_settings->fb_ads_pixel}}');
             fbq('track', 'PageView');
         </script>
