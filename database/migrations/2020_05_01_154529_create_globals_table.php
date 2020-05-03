@@ -15,6 +15,9 @@ class CreateGlobalsTable extends Migration
     {
         Schema::create('globals', function (Blueprint $table) {
             $table->id();
+            $table->string('fb_ads_pixel')->nullable();
+            $table->string('google_analytics_tag')->nullable();
+            $table->string('contact_email')->nullable();
             $table->timestamps();
         });
     }

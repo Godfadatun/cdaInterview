@@ -17,10 +17,9 @@ use App\Mail\ContactMail;
 
 
 Auth::routes();
-
+Route::get('home', 'HomeController@index')->name('home');
 
 Route::resource('/', 'MainController');
 Route::resource('contact', 'ContactController');
-
-Route::get('home', 'HomeController@index')->name('home');
 Route::resource('admin', 'AdminController');
+Route::resource('page', 'PageController');
