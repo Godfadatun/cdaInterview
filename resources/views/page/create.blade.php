@@ -118,7 +118,7 @@
                             <label for="content" class="col-md-4 col-form-label text-md-right">{{ __('Content') }}</label>
 
                             <div class="col-md-6">
-                                @trix(\App\Page::class, 'content', [ 'hideTools' => ['file-tools'] ])
+                                <textarea name="content" id="content" class="form-control my-editor"></textarea>
 
                                 @error('content')
                                     <span class="invalid-feedback" role="alert">
