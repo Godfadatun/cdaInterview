@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class Globals extends Seeder
+class GlobalSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,9 +13,9 @@ class Globals extends Seeder
     public function run()
     {
         DB::table('globals')->insert([
-            'fb_ads_pixel' => '',
-            'google_analytics_tag' => '',
-            'contact_email' => '',
+            'fb_ads_pixel' => '547445562579633',
+            'google_analytics_tag' => 'UA-165353516-1',
+            'contact_email' => 'danyadegoke@gmail.com',
         ]);
     }
 }
