@@ -2,17 +2,14 @@
 @extends('layouts.main')
 
 @section('content')
-    <section id="theContact" class="d-flex align-items-center"></section><!-- End Hero -->
-
+    <section id="theContact" class="d-flex align-items-center" ></section><!-- End Hero -->
+    {{-- <img  src="{{ URL::asset('img/' . $contact->featured_image) }}" alt="" style="width: 100%; height: 50vh; background-size: cover;" > --}}
+    {{$contact->featured_image}}
   <!-- ======= About Section ======= -->
     <section id="about" class="">
         <div class="container">
 
-        <span class="theHeader">BeMo Academic Consulting Inc.</span><br>
-        <span><u><strong>Toll Free:</strong></u> 1-855-900-BeMo (2366)</span><br>
-        <span><u><strong>Email:</strong></u> info@bemoacademicconsulting.com </span>
-
-
+        {!! $contact->content !!}
 
         </div>
     </section><!-- End About Section -->
@@ -20,7 +17,7 @@
 
     <section id="contact" class="contact">
         <div class="container">
-            
+
         <form action="{{ url('contact') }}" method="post" role="form" class="php-email-form d-flex justify-content-center flex-column text-center">
             {{ csrf_field() }}
             <div class="form-group">

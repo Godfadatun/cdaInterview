@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Page;
 
 class MainController extends Controller
 {
@@ -13,6 +14,7 @@ class MainController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $home = Page::where('name', 'home')->first();
+        return view('index', compact('home'));
     }
 }

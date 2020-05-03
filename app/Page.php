@@ -10,6 +10,6 @@ class Page extends Model
     use HasTrixRichText;
 
     protected $fillable = [
-        'featured_image','title','heading','content','no_index','meta_title','meta_description'
+        'name','featured_image','title','heading','content','no_index','meta_title','meta_description'
     ];
 }

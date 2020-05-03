@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Contact;
 use App\Mail\ContactMail;
 use Illuminate\Support\Facades\Mail;
+use App\Page;
+
 
 class ContactController extends Controller
 {
@@ -17,7 +19,8 @@ class ContactController extends Controller
     public function index()
     {
         //
-        return view('contact');
+        $contact = Page::where('name', 'contact')->first();
+        return view('contact', compact('contact'));
     }
 
     /**
