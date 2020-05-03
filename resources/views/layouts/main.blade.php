@@ -20,11 +20,7 @@
         <!-- Vendor CSS Files -->
         <link href="{{ asset('css/app.css') }}"" rel="stylesheet">
         <link href="{{ asset('assets/vendor/icofont/icofont.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('assets/vendor/venobox/venobox.css') }}" rel="stylesheet">
-        <link href="{{ asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('assets/vendor/aos/aos.css') }}"" rel="stylesheet">
-
+        
         <!-- Template Main CSS File -->
         <link href="{{ asset('assets/css/style.css')}}" rel="stylesheet">
 
@@ -64,7 +60,7 @@
         <header id="header" class="fixed-top ">
             <div class="container d-flex align-items-center">
 
-            <a href="{{ url('/') }}" class="logo mr-auto"><img src="https://cdainterview.com/rw_common/images/bemo-logo2.png" width="167" alt="BeMo logo" class="img-fluid"/></a>
+            <a href="{{ url('/') }}" class="logo mr-auto"><img src="{{asset('assets/img/bemo-logo2.png')}}" width="167" alt="BeMo logo" class="img-fluid"/></a>
 
             <nav class="nav-menu d-none d-lg-block ">
                 <ul class="">
@@ -94,13 +90,7 @@
 
         <!-- Vendor JS Files -->
         <script src="{{ asset('assets/vendor/jquery/jquery.min.js')}}"></script>
-        <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-        <script src="{{ asset('assets/vendor/jquery.easing/jquery.easing.min.js')}}"></script>
         <script src="{{ asset('assets/vendor/php-email-form/validate.js')}}"></script>
-        <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
-        <script src="{{ asset('assets/vendor/venobox/venobox.min.js')}}"></script>
-        <script src="{{ asset('assets/vendor/owl.carousel/owl.carousel.min.js')}}"></script>
-        <script src="{{ asset('assets/vendor/aos/aos.js')}}"></script>
 
         <!-- Template Main JS File -->
         <script src="{{ asset('assets/js/main.js')}}"></script>
