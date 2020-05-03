@@ -14,28 +14,18 @@ use App\Mail\ContactMail;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-// Route::get('/contact', function () {
-//     return view('contact');
-// });
-Route::get('/admin', function () {
-    return view('welcome');
-});
 
-Route::get('/email', function () {
-    return new ContactMail();
-});
-
-// Route::get('/', function () {
-//     return view('main');
-// });
 
 Auth::routes();
+Route::get('home', 'HomeController@index')->name('home');
 
+<<<<<<< HEAD
 Route::get('/home', 'HomeController@index')->name('home');
 
+=======
+Route::resource('/', 'MainController');
+>>>>>>> af8d933924854621ea7fd99bc7a4c929bd79d581
 Route::resource('contact', 'ContactController');
+Route::resource('admin', 'AdminController');
 Route::resource('page', 'PageController');
 Route::resource('globals', 'GlobalController');

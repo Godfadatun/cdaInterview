@@ -19,14 +19,38 @@
 
         <!-- Vendor CSS Files -->
         <link href="{{ asset('css/app.css') }}"" rel="stylesheet">
-        <link href="{{ asset('assets/vendor/icofont/icofont.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('assets/vendor/venobox/venobox.css') }}" rel="stylesheet">
-        <link href="{{ asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('assets/vendor/aos/aos.css') }}"" rel="stylesheet">
+        <link rel="stylesheet" href="https://allyoucan.cloud/cdn/icofont/1.0.1/icofont.css" integrity="sha384-jbCTJB16Q17718YM9U22iJkhuGbS0Gd2LjaWb4YJEZToOPmnKDjySVa323U+W7Fv" crossorigin="anonymous">
 
         <!-- Template Main CSS File -->
         <link href="{{ asset('assets/css/style.css')}}" rel="stylesheet">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165353516-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-165353516-1');
+        </script>
+
+        <!-- Facebook Pixel Code -->
+        <script>
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '547445562579633');
+            fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=547445562579633&ev=PageView&noscript=1"
+        /></noscript>
+        <!-- End Facebook Pixel Code -->
 
         </head>
 
@@ -36,7 +60,7 @@
         <header id="header" class="fixed-top ">
             <div class="container d-flex align-items-center">
 
-            <a href="{{ url('/') }}" class="logo mr-auto"><img src="https://cdainterview.com/rw_common/images/bemo-logo2.png" width="167" alt="BeMo logo" class="img-fluid"/></a>
+            <a href="{{ url('/') }}" class="logo mr-auto"><img src="{{asset('assets/img/bemo-logo2.png')}}" width="167" alt="BeMo logo" class="img-fluid"/></a>
 
             <nav class="nav-menu d-none d-lg-block ">
                 <ul class="">
@@ -51,7 +75,7 @@
         </header><!-- End Header -->
 
 
-    @yield('content')
+        @yield('content')
 
     <!--= Footer ======= -->
         <footer id="footer">
@@ -65,14 +89,10 @@
         <div id="preloader"></div>
 
         <!-- Vendor JS Files -->
-        <script src="{{ asset('assets/vendor/jquery/jquery.min.js')}}"></script>
-        <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-        <script src="{{ asset('assets/vendor/jquery.easing/jquery.easing.min.js')}}"></script>
+
+        <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <script src="{{ asset('assets/vendor/php-email-form/validate.js')}}"></script>
-        <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
-        <script src="{{ asset('assets/vendor/venobox/venobox.min.js')}}"></script>
-        <script src="{{ asset('assets/vendor/owl.carousel/owl.carousel.min.js')}}"></script>
-        <script src="{{ asset('assets/vendor/aos/aos.js')}}"></script>
 
         <!-- Template Main JS File -->
         <script src="{{ asset('assets/js/main.js')}}"></script>
