@@ -20,17 +20,7 @@
 
     <section id="contact" class="contact">
         <div class="container">
-            {{-- {{ if (count($errors > 0)) }}
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                        <li>{{$error}}</li>
-                        @endforeach
-                    </ul>
-                </div>
-
-            {{ endif }} --}}
-
+            
         <form action="{{ url('contact') }}" method="post" role="form" class="php-email-form d-flex justify-content-center flex-column text-center">
             {{ csrf_field() }}
             <div class="form-group">

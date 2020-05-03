@@ -21,12 +21,6 @@
         <link href="{{ asset('css/app.css') }}"" rel="stylesheet">
         <link rel="stylesheet" href="https://allyoucan.cloud/cdn/icofont/1.0.1/icofont.css" integrity="sha384-jbCTJB16Q17718YM9U22iJkhuGbS0Gd2LjaWb4YJEZToOPmnKDjySVa323U+W7Fv" crossorigin="anonymous">
 
-        {{-- <link href="{{ asset('assets/vendor/icofont/icofont.min.css') }}" rel="stylesheet"> --}}
-        {{-- <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet"> --}}
-        {{-- <link href="{{ asset('assets/vendor/venobox/venobox.css') }}" rel="stylesheet"> --}}
-        {{-- <link href="{{ asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet"> --}}
-        {{-- <link href="{{ asset('assets/vendor/aos/aos.css') }}"" rel="stylesheet"> --}}
-
         <!-- Template Main CSS File -->
         <link href="{{ asset('assets/css/style.css')}}" rel="stylesheet">
 
@@ -99,17 +93,6 @@
         <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <script src="{{ asset('assets/vendor/php-email-form/validate.js')}}"></script>
-
-        {{-- <script src="{{ asset('assets/vendor/jquery/jquery.min.js')}}"></script> --}}
-        {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/validate-js/2.0.1/validate.min.js"></script> --}}
-        {{-- <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script> --}}
-        {{-- <script src="{{ asset('assets/vendor/jquery.easing/jquery.easing.min.js')}}"></script> --}}
-        {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script> --}}
-        {{-- <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script> --}}
-        {{-- <script src="{{ asset('assets/vendor/venobox/venobox.min.js')}}"></script> --}}
-        {{-- <script src="{{ asset('assets/vendor/owl.carousel/owl.carousel.min.js')}}"></script> --}}
-        {{-- <script src="{{ asset('assets/vendor/aos/aos.js')}}"></script> --}}
 
         <!-- Template Main JS File -->
         <script src="{{ asset('assets/js/main.js')}}"></script>
